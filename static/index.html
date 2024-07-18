@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Wordle</title>
+    <link rel="stylesheet" type="text/css" href="mainStyles.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+    <link rel="icon" type="image/png" sizes="64x" href="../assets/imgs/wordle.webp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <script src="mainScript.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            loadToastr();
+            loadGuessContainer();
+        });
+    </script>
+</head>
+<body>
+    <div class="main_container">
+        <div class="guess_container">
+
+        </div>
+        <div class="keyboard_container">
+            <div class="keyboard">
+                <div class="row row1">
+                    <button class="btn btn-light" id="Q" onclick="displayLetter('Q')">Q</button>
+                    <button class="btn btn-light" id="W" onclick="displayLetter('W')">W</button>
+                    <button class="btn btn-light" id="E" onclick="displayLetter('E')">E</button>
+                    <button class="btn btn-light" id="R" onclick="displayLetter('R')">R</button>
+                    <button class="btn btn-light" id="T" onclick="displayLetter('T')">T</button>
+                    <button class="btn btn-light" id="Y" onclick="displayLetter('Y')">Y</button>
+                    <button class="btn btn-light" id="U" onclick="displayLetter('U')">U</button>
+                    <button class="btn btn-light" id="I" onclick="displayLetter('I')">I</button>
+                    <button class="btn btn-light" id="O" onclick="displayLetter('O')">O</button>
+                    <button class="btn btn-light" id="P" onclick="displayLetter('P')">P</button>
+                </div>
+                <div class="row row2">
+                    <button class="btn btn-light" id="A" onclick="displayLetter('A')">A</button>
+                    <button class="btn btn-light" id="S" onclick="displayLetter('S')">S</button>
+                    <button class="btn btn-light" id="D" onclick="displayLetter('D')">D</button>
+                    <button class="btn btn-light" id="F" onclick="displayLetter('F')">F</button>
+                    <button class="btn btn-light" id="G" onclick="displayLetter('G')">G</button>
+                    <button class="btn btn-light" id="H" onclick="displayLetter('H')">H</button>
+                    <button class="btn btn-light" id="J" onclick="displayLetter('J')">J</button>
+                    <button class="btn btn-light" id="K" onclick="displayLetter('K')">K</button>
+                    <button class="btn btn-light" id="L" onclick="displayLetter('L')">L</button>
+                </div>
+                <div class="row row3">
+                    <button class="btn btn-light big" id="Enter" onclick="displayLetter('ENTER')">Enter</button>
+
+                    <button class="btn btn-light" id="Z" onclick="displayLetter('Z')">Z</button>
+                    <button class="btn btn-light" id="X" onclick="displayLetter('X')">X</button>
+                    <button class="btn btn-light" id="C" onclick="displayLetter('C')">C</button>
+                    <button class="btn btn-light" id="V" onclick="displayLetter('V')">V</button>
+                    <button class="btn btn-light" id="B" onclick="displayLetter('B')">B</button>
+                    <button class="btn btn-light" id="N" onclick="displayLetter('N')">N</button>
+                    <button class="btn btn-light" id="M" onclick="displayLetter('M')">M</button>
+
+                    <button class="btn btn-light big" id="Del" onclick="displayLetter('BACKSPACE')"><i class="fa-solid fa-delete-left"></i></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
